@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя Визитка</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #000000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start; /* Выравнивание по верху */
+            height: 100vh;
+            margin: 0;
+            overflow: hidden; /* Скрывает содержимое, выходящее за пределы экрана */
+            padding-top: 20px; /* Отступ сверху для всех элементов */
+        }
+
+        @keyframes fadein {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes moveDown {
+            from {
+                transform: translateY(0); /* Начальная позиция */
+            }
+            to {
+                transform: translateY(600px); /* Перемещение вниз на 600px */
+            }
+        }
+
+        @keyframes slideInOut {
+            0% {
+                transform: translateX(-100%); /* Начало за левым краем экрана */
+            }
+            100% {
+                transform: translateX(110vw); /* Уход за правый край экрана */
+            }
+        }
+
+        h1, h2 {
+            color: #ffffff;
+            margin: 0;
+            animation: fadein 2s ease-in-out;
+        }
+
+        h1 {
+            font-size: 8vw; /* Относительный размер для адаптивности */
+            margin-bottom: 10px; /* Отступ снизу между заголовком и изображениями */
+        }
+
+        h2 {
+            font-size: 6vw; /* Относительный размер для адаптивности */
+            font-weight: bold;
+            animation: fadein 2s ease-in-out, moveDown 2s ease-in-out 2s; /* Появление и движение вниз с задержкой */
+            animation-fill-mode: forwards;
+            margin-bottom: 20px; /* Отступ снизу между заголовком и изображениями */
+        }
+
+        .gallery {
+            display: flex;
+            position: relative; /* Необходимо для правильного позиционирования дочерних элементов */
+            width: 100vw; /* Полная ширина контейнера */
+            height: 300px; /* Установите высоту контейнера по своему усмотрению */
+            overflow: hidden; /* Скрывает изображения, которые выходят за пределы контейнера */
+        }
+
+        .gallery img {
+            position: absolute; /* Необходимо для правильного позиционирования анимации */
+            width: 300px; /* Размер изображений */
+            height: auto; /* Автоматическая высота для сохранения пропорций */
+            border-radius: 8px; /* Скругление углов для лучшего вида */
+            animation: slideInOut 20s linear infinite; /* Плавная анимация с постоянной скоростью */
+        }
+
+        /* Установка задержки для анимации каждого изображения */
+        .gallery img:nth-child(1) {
+            left: -300px; /* Начальная позиция за левым краем */
+            animation-delay: 0s;
+        }
+
+        .gallery img:nth-child(2) {
+            left: -300px; /* Начальная позиция за левым краем */
+            animation-delay: 2s; /* Задержка 2 секунды для второго изображения */
+        }
+
+        .gallery img:nth-child(3) {
+            left: -300px; /* Начальная позиция за левым краем */
+            animation-delay: 4s; /* Задержка 4 секунды для третьего изображения */
+        }
+
+        .gallery img:nth-child(4) {
+            left: -300px; /* Начальная позиция за левым краем */
+            animation-delay: 6s; /* Задержка 6 секунд для четвертого изображения */
+        }
+        .gallery img:nth-child(5) {
+            left: -300px; 
+            animation-delay: 8s;
+        }
+        .gallery img:nth-child(6) {
+            left: -300px; 
+            animation-delay: 10s;
+        }
+        .gallery img:nth-child(7) {
+            left: -300px; 
+            animation-delay: 12s;
+        }
+        .gallery img:nth-child(8) {
+            left: -300px; 
+            animation-delay: 14s;
+        }
+        .gallery img:nth-child(9) {
+            left: -300px; 
+            animation-delay: 16s;
+        }
+        .gallery img:nth-child(10) {
+            left: -300px; 
+            animation-delay: 18s;
+        }
+      
+    </style>
+</head>
+<body>
+    <h1>TIME LORD</h1>
+    <h2>PHOTOGRAPHY</h2>
+    <div class="gallery">
+        <img src="img/P1.jpg" alt="Photo 1">
+        <img src="img/P2.jpg" alt="Photo 2">
+        <img src="img/P3.jpg" alt="Photo 3">
+        <img src="img/P4.jpg" alt="Photo 4">
+        <img src="img/P5.jpg" alt="Photo 5">
+        <img src="img/P6.jpg" alt="Photo 6">
+        <img src="img/P7.jpg" alt="Photo 7">
+        <img src="img/P8.jpg" alt="Photo 8">
+        <img src="img/P9.jpg" alt="Photo 9">
+        <img src="img/P10.jpg" alt="Photo 10">
+        <!-- Добавьте дополнительные изображения по необходимости -->
+    </div>
+</body>
+</html>
